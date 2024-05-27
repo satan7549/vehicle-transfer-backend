@@ -4,9 +4,10 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmConfig } from './config/typeorm.config';
 import { DriverModule } from './driver/driver.module';
+import { VehicleModule } from './vechicle/vehicle.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(typeOrmConfig), DriverModule],
+  imports: [TypeOrmModule.forRoot(typeOrmConfig), DriverModule,VehicleModule],
   controllers: [AppController],
   providers: [AppService],
 })
