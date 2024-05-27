@@ -3,11 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmConfig } from './config/typeorm.config';
-import { DriverModule } from './driver/driver.module';
-import { VehicleModule } from './vechicle/vehicle.module';
+import { TransferModule } from './transfer/transfer.module';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(typeOrmConfig), DriverModule,VehicleModule],
+  imports: [TypeOrmModule.forRoot(typeOrmConfig), TransferModule],
   controllers: [AppController],
   providers: [AppService],
 })
